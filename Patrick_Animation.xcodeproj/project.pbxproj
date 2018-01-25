@@ -14,6 +14,8 @@
 		124109482018674E0054CA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124109462018674E0054CA47 /* LaunchScreen.storyboard */; };
 		124109532018674E0054CA47 /* Patrick_AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124109522018674E0054CA47 /* Patrick_AnimationTests.swift */; };
 		1241095E2018674E0054CA47 /* Patrick_AnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241095D2018674E0054CA47 /* Patrick_AnimationUITests.swift */; };
+		1241097C2018BC670054CA47 /* cellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241097B2018BC670054CA47 /* cellHeader.swift */; };
+		1241097E2018BC7F0054CA47 /* cellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1241097D2018BC7F0054CA47 /* cellHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		124109592018674E0054CA47 /* Patrick_AnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Patrick_AnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1241095D2018674E0054CA47 /* Patrick_AnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patrick_AnimationUITests.swift; sourceTree = "<group>"; };
 		1241095F2018674E0054CA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1241097B2018BC670054CA47 /* cellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellHeader.swift; sourceTree = "<group>"; };
+		1241097D2018BC7F0054CA47 /* cellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				124109442018674E0054CA47 /* Assets.xcassets */,
 				124109462018674E0054CA47 /* LaunchScreen.storyboard */,
 				124109492018674E0054CA47 /* Info.plist */,
+				1241097B2018BC670054CA47 /* cellHeader.swift */,
+				1241097D2018BC7F0054CA47 /* cellHeader.xib */,
 			);
 			path = Patrick_Animation;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1241097E2018BC7F0054CA47 /* cellHeader.xib in Resources */,
 				124109482018674E0054CA47 /* LaunchScreen.storyboard in Resources */,
 				124109452018674E0054CA47 /* Assets.xcassets in Resources */,
 				124109432018674E0054CA47 /* Main.storyboard in Resources */,
@@ -261,6 +268,7 @@
 			files = (
 				124109402018674E0054CA47 /* ViewController.swift in Sources */,
 				1241093E2018674E0054CA47 /* AppDelegate.swift in Sources */,
+				1241097C2018BC670054CA47 /* cellHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
