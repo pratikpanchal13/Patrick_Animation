@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Patrick_Animation/ViewController.swift"
-            timestampString = "538567860.189374"
+            timestampString = "538568200.681524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:willDisplayHeaderView:forSection:)"
             landmarkType = "7">
             <Locations>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Patrick_Animation/ViewController.swift"
-            timestampString = "538567860.190218"
+            timestampString = "538568200.682211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>

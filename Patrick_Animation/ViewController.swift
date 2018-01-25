@@ -78,7 +78,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,6 +87,8 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         
         cell.lblName.text = ""
         
+        
+        // For Dynamic Height of Collection View inside Tableview
         // deque a cell
         cell.frame = tableView.bounds
         cell.layoutIfNeeded()
