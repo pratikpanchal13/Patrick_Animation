@@ -32,6 +32,44 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzB-lP-l8H">
                                                     <rect key="frame" x="10" y="10" width="355" height="159.5"/>
                                                     <subviews>
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-7u-cMd">
+                                                            <rect key="frame" x="10" y="10" width="335" height="139.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="139.5" id="HSX-eI-yVU"/>
+                                                            </constraints>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="kHL-LM-05n">
+                                                                <size key="itemSize" width="103" height="142"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                                            </collectionViewFlowLayout>
+                                                            <cells>
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCollection" id="HSO-dn-NnE" customClass="cellCollection" customModule="Patrick_Animation" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="10" width="103" height="142"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="142"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pratik" translatesAutoresizingMaskIntoConstraints="NO" id="r8V-BH-xe2">
+                                                                                <rect key="frame" x="8" y="8" width="95" height="126.5"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstItem="r8V-BH-xe2" firstAttribute="leading" secondItem="HSO-dn-NnE" secondAttribute="leading" constant="8" id="94i-Yf-Hc2"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="r8V-BH-xe2" secondAttribute="bottom" constant="8" id="Day-p7-HXZ"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="r8V-BH-xe2" secondAttribute="trailing" id="Yky-LD-dgq"/>
+                                                                        <constraint firstItem="r8V-BH-xe2" firstAttribute="top" secondItem="HSO-dn-NnE" secondAttribute="top" constant="8" id="o0J-ox-5bI"/>
+                                                                    </constraints>
+                                                                </collectionViewCell>
+                                                            </cells>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="bJs-ed-Pnf"/>
+                                                                <outlet property="delegate" destination="BYZ-38-t0r" id="Jto-wh-R8A"/>
+                                                            </connections>
+                                                        </collectionView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnB-ma-WnS">
                                                             <rect key="frame" x="8" y="27" width="52" height="21"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -41,6 +79,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.57647058823529407" green="0.1764705882352941" blue="0.6705882352941176" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="bS2-7u-cMd" firstAttribute="top" secondItem="OzB-lP-l8H" secondAttribute="top" constant="10" id="73l-2Y-PJe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="bS2-7u-cMd" secondAttribute="bottom" constant="10" id="A6b-UY-zZv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bS2-7u-cMd" secondAttribute="trailing" constant="10" id="B6v-1d-3FZ"/>
+                                                        <constraint firstItem="bS2-7u-cMd" firstAttribute="leading" secondItem="OzB-lP-l8H" secondAttribute="leading" constant="10" id="QQj-QC-6N0"/>
                                                         <constraint firstItem="BnB-ma-WnS" firstAttribute="leading" secondItem="OzB-lP-l8H" secondAttribute="leading" constant="8" id="YhR-nA-M3S"/>
                                                         <constraint firstItem="BnB-ma-WnS" firstAttribute="top" secondItem="OzB-lP-l8H" secondAttribute="top" constant="27" id="hNx-ot-MKW"/>
                                                         <constraint firstAttribute="bottom" secondItem="BnB-ma-WnS" secondAttribute="bottom" constant="111.5" id="yQw-U5-Wii"/>
@@ -57,6 +99,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="collectionViewHeight" destination="HSX-eI-yVU" id="COm-Fx-yL7"/>
+                                            <outlet property="collectionViewUser" destination="bS2-7u-cMd" id="xS8-kB-rcf"/>
                                             <outlet property="lblName" destination="BnB-ma-WnS" id="qpB-Xz-DAg"/>
                                         </connections>
                                     </tableViewCell>
@@ -103,4 +147,7 @@
             <point key="canvasLocation" x="-654" y="103"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pratik" width="675" height="1200"/>
+    </resources>
 </document>

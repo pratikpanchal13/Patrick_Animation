@@ -13,5 +13,69 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Patrick_Animation/ViewController.swift"
+            timestampString = "538567860.189374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "tableView(_:willDisplayHeaderView:forSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Patrick_Animation.ViewController.tableView(__ObjC.UITableView, willDisplayHeaderView: __ObjC.UIView, forSection: Swift.Int) -&gt; ()"
+                  moduleName = "Patrick_Animation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratikpanchal/Desktop/Pratik%20/Patrick_Animation/Patrick_Animation/ViewController.swift"
+                  timestampString = "538566199.4724931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Patrick_Animation.ViewController.tableView(__ObjC.UITableView, willDisplayHeaderView: __ObjC.UIView, forSection: Swift.Int) -&gt; ()"
+                  moduleName = "Patrick_Animation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pratikpanchal/Desktop/Pratik%20/Patrick_Animation/Patrick_Animation/ViewController.swift"
+                  timestampString = "538566199.482698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Patrick_Animation/ViewController.swift"
+            timestampString = "538567860.190218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

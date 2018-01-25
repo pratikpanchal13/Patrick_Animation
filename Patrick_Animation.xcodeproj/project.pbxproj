@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1223E4312019DA7100F41AD5 /* cellCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223E4302019DA7100F41AD5 /* cellCollection.swift */; };
 		1241093E2018674E0054CA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241093D2018674E0054CA47 /* AppDelegate.swift */; };
 		124109402018674E0054CA47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1241093F2018674E0054CA47 /* ViewController.swift */; };
 		124109432018674E0054CA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124109412018674E0054CA47 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1223E4302019DA7100F41AD5 /* cellCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellCollection.swift; sourceTree = "<group>"; };
 		1241093A2018674E0054CA47 /* Patrick_Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Patrick_Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1241093D2018674E0054CA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1241093F2018674E0054CA47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1223E42F2019D9BC00F41AD5 /* CollectioView */ = {
+			isa = PBXGroup;
+			children = (
+				1223E4302019DA7100F41AD5 /* cellCollection.swift */,
+			);
+			path = CollectioView;
+			sourceTree = "<group>";
+		};
 		124109312018674E0054CA47 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		1241093C2018674E0054CA47 /* Patrick_Animation */ = {
 			isa = PBXGroup;
 			children = (
+				1223E42F2019D9BC00F41AD5 /* CollectioView */,
 				1241093D2018674E0054CA47 /* AppDelegate.swift */,
 				1241093F2018674E0054CA47 /* ViewController.swift */,
 				124109412018674E0054CA47 /* Main.storyboard */,
@@ -269,6 +280,7 @@
 				124109402018674E0054CA47 /* ViewController.swift in Sources */,
 				1241093E2018674E0054CA47 /* AppDelegate.swift in Sources */,
 				1241097C2018BC670054CA47 /* cellHeader.swift in Sources */,
+				1223E4312019DA7100F41AD5 /* cellCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

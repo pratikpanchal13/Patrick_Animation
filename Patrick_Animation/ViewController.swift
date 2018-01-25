@@ -59,7 +59,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return UITableViewAutomaticDimension
-        //        return 90
+//                return 200
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -85,7 +85,13 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         
         let cell:cellUser = tableView.dequeueReusableCell(withIdentifier: "cellUser", for: indexPath) as! cellUser
         
-        cell.lblName.text = "Test"
+        cell.lblName.text = ""
+        
+        // deque a cell
+        cell.frame = tableView.bounds
+        cell.layoutIfNeeded()
+        cell.collectionViewUser.reloadData()
+        cell.collectionViewHeight.constant = cell.collectionViewUser.collectionViewLayout.collectionViewContentSize.height;
         
         return cell
     }
@@ -101,11 +107,22 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
         gradientLayer.frame = self.view.bounds
 
         if self.view.layer.sublayers!.count > 1{
-              self.view.layer.sublayers!.remove(at: 0)
-            self.view.layer.insertSublayer(gradientLayer, at: 0)
+            
+            UIView.animate(withDuration: 0.5) {
+                
+                self.view.layer.sublayers!.remove(at: 0)
+                self.view.layer.insertSublayer(gradientLayer, at: 0)
+                self.view.layoutIfNeeded()
+            }
+            
 
         }else{
-            self.view.layer.insertSublayer(gradientLayer, at: 0)
+            
+            UIView.animate(withDuration: 0.5) {                
+                self.view.layer.insertSublayer(gradientLayer, at: 0)
+                self.view.layoutIfNeeded()
+            }
+
         }
     }
     
@@ -128,19 +145,19 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource{
 
         switch section {
         case 0:
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseIn, .curveEaseOut, .allowUserInteraction], animations: {() -> Void in
+            UIView.animate(withDuration: 1.5, delay: 0.0, options: .curveEaseOut, animations: {() -> Void in
                 self.setGradientBackground(UIColor.cyan, colorBottoms: UIColor.green)
                 
             })
             break
         case 1:
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseIn, .curveEaseOut, .allowUserInteraction], animations: {() -> Void in
+            UIView.animate(withDuration: 1.5, delay: 1.0, options: .curveEaseOut, animations: {() -> Void in
                 self.setGradientBackground(UIColor.cyan, colorBottoms: UIColor.blue)
 
             })
             break
         case 2:
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseIn, .curveEaseOut, .allowUserInteraction], animations: {() -> Void in
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {() -> Void in
                 self.setGradientBackground(UIColor.cyan, colorBottoms: UIColor.yellow)
             })
             break
@@ -169,10 +186,44 @@ class cellUser :UITableViewCell{
     @IBOutlet weak var imgProfile: UIImageView!
     
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var collectionViewUser: UICollectionView!
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
 }
 
 
+//MARK:- Collectionview Datasource & Delegate
+extension ViewController : UICollectionViewDelegate,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout
+{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         return 16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell :cellCollection = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath) as! cellCollection
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let nbCol = 4
+        
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(nbCol - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(nbCol))
+        return CGSize(width: size, height: size)
+        
+    }
 
-
+}
 
 
